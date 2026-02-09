@@ -24,7 +24,7 @@ body {
 
 .container { /*контейнер помогает нам выстроить левую и правую часть сайта*/
     flex: 1;
-    max-width: none;            /* важно! */
+    max-width: none;       
     display: flex;
     align-items: flex-start;
 }
@@ -42,8 +42,8 @@ body {
     line-height: 65px; /*растояние между строками*/
     color: #f1f4f7;
     position: absolute;
-    top: 82px;
-    left: 400px; /*переход на некст строчку*/
+    top: 90px;
+    left: 200px; /*переход на некст строчку*/
 }
 
 .description > span {
@@ -67,8 +67,8 @@ body {
     display: flex;
     position: absolute;
     top: 325px;
-    left: 270px; /*переход на некст строчку*/
-    height: 600px;
+    left: 200px; /*переход на некст строчку*/
+    height: 400px;
 }
 
 .left {

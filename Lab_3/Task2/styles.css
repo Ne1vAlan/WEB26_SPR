@@ -1,0 +1,112 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body { 
+    font-family: Arial, sans-serif; 
+    background:#f7f7f7; 
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #1f1f1f;
+}
+
+.midl {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.navbar-title {
+    font-size: 20px;
+
+    position: absolute;
+    top: 15px;
+    left: 100px;
+    color: gray;
+}
+    
+.title {
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.title-text { 
+    font-size: 30px;
+}
+
+.top { 
+    display: flex; 
+    width: 720px; 
+    margin: 0 auto;
+    gap: 30px; 
+}
+
+.top input { 
+    flex: 1; 
+    padding: 10px 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 6px; 
+}
+
+.top button { 
+    padding: 10px 14px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+
+    color: white;
+    background: #2f74b5;
+}
+  
+
+
+
+.list {
+    width: 900px;
+    margin: 30px auto;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    overflow: hidden; /* чтобы линии красиво резались по радиусу */
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    border-top: 1px solid #eee;
+}
+
+.list li:first-child {
+    border-top: none;
+}
+ 
+.list li input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.list li span {
+    flex: 1;
+    font-size: 15px;
+}
+
+.list li button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    color: #e74c3c; 
+}
+
