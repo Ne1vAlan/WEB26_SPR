@@ -1,0 +1,40 @@
+<section class="wrap card">
+  <div class="top">
+    <div>
+      <h2 class="h1" style="font-size:28px;margin:0 0 6px;">Album Detail</h2>
+      <p class="p">Edit album title and open its photos.</p>
+    </div>
+
+    <div class="meta" *ngIf="album$ | async as album">
+      <span class="pill">ID: {{ album?.id }}</span>
+      <span class="pill">User: {{ album?.userId }}</span>
+    </div>
+  </div>
+
+  <div *ngIf="error">{{ error }}</div>
+
+  <ng-container *ngIf="album$ | async as album; else loadingTpl">
+    <ng-container *ngIf="album; else notFoundTpl">
+
+      <div class="form">
+        <label class="p">Title</label>
+        <input class="input" [(ngModel)]="title" />
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" (click)="save(album)">Save</button>
+        <a class="btn" [routerLink]="['/albums', album.id, 'photos']">View Photos</a>
+        <button class="btn" (click)="back()">Back</button>
+      </div>
+
+    </ng-container>
+  </ng-container>
+
+  <ng-template #loadingTpl>
+    <div class="loading"><span class="spinner"></span> Loading...</div>
+  </ng-template>
+
+  <ng-template #notFoundTpl>
+    <div class="p">Album not found.</div>
+  </ng-template>
+</section>

@@ -1,0 +1,36 @@
+<div class="page">
+  <header class="topbar">
+    <div class="brand">Mini Kaspi Store</div>
+    <div class="hint">Выбери категорию — и погнали в шопинг (без кредитного скоринга 😄)</div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h3>Categories</h3>
+
+      <div class="cats">
+        @for (c of categories; track c.id) {
+          <button
+            class="cat-btn"
+            [class.active]="c.id === selectedCategoryId"
+            (click)="selectCategory(c)"
+          >
+            {{ c.name }}
+          </button>
+        }
+      </div>
+    </aside>
+
+    <main class="content">
+      @if (selectedCategoryId === null) {
+        <div class="welcome">
+          <h2>Welcome</h2>
+          <p>Нажми на категорию слева, чтобы увидеть товары.</p>
+        </div>
+      } @else {
+        <h2 class="title">{{ selectedCategoryName }}</h2>
+        <app-product-list [products]="visibleProducts"></app-product-list>
+      }
+    </main>
+  </div>
+</div>

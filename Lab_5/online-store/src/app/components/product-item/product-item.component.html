@@ -1,0 +1,26 @@
+<article class="card">
+  <a class="img-wrap" [href]="product.kaspiUrl" target="_blank" rel="noopener">
+    <img [src]="product.imageUrl" [alt]="product.name" />
+  </a>
+
+  <div class="body">
+    <a class="name" [href]="product.kaspiUrl" target="_blank" rel="noopener">
+      {{ product.name }}
+    </a>
+
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="meta">
+      <div class="price">{{ product.price | number }} ₸</div>
+      <div class="rating">⭐ {{ product.rating }}</div>
+      <div class="likes">❤ {{ product.likes }}</div>
+    </div>
+
+    <div class="actions">
+      <button class="btn" (click)="like()">Like</button>
+      <button class="btn" (click)="shareWhatsapp()">WhatsApp</button>
+      <button class="btn" (click)="shareTelegram()">Telegram</button>
+      <button class="btn danger" (click)="askDelete()">Delete</button>
+    </div>
+  </div>
+</article>

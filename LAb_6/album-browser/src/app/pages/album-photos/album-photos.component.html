@@ -1,0 +1,28 @@
+<section class="wrap card">
+  <div class="top">
+    <div>
+      <h2 class="h1" style="font-size:28px;margin:0 0 6px;">Photos</h2>
+      <p class="p">Gallery of the selected album.</p>
+    </div>
+    <ng-container *ngIf="albumId$ | async as albumId">
+      <button class="btn" (click)="back(albumId)">Back</button>
+    </ng-container>
+  </div>
+
+  <div *ngIf="error">{{ error }}</div>
+
+  <ng-container *ngIf="photos$ | async as photos; else loadingTpl">
+    <div *ngIf="photos.length === 0 && !error" class="p">Empty list.</div>
+
+    <div class="grid" *ngIf="photos.length > 0">
+      <div class="photo" *ngFor="let p of photos">
+        <img [src]="p.thumbnailUrl" [alt]="p.title" />
+        <div class="caption">{{ p.title }}</div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #loadingTpl>
+    <div class="loading"><span class="spinner"></span> Loading...</div>
+  </ng-template>
+</section>

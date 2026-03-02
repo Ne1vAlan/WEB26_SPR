@@ -1,0 +1,22 @@
+.list { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 10px; }
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.info { text-decoration: none; color: inherit; display: flex; gap: 10px; align-items: baseline; }
+.id { font-weight: 700; color: #6b7280; }
+.title { font-weight: 600; }
+.del {
+  border: 1px solid #ef4444;
+  background: transparent;
+  color: #ef4444;
+  padding: 8px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.muted { color: #6b7280; }
+.error { color: #b91c1c; }

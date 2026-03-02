@@ -71,7 +71,6 @@ export class ProductCardComponent {
   stars = [1, 2, 3, 4, 5];
 
   ngOnInit(): void {
-    // main image по умолчанию: product.image, если нет — первая из images
     this.selectedImage = this.product.image || this.product.images[0] || '';
   }
 

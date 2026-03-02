@@ -1,0 +1,57 @@
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 14px 0;
+  margin-bottom: 18px;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 12px 14px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.brand .dot{
+  width: 10px; height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), rgba(59,130,246,.9));
+  box-shadow: 0 0 0 6px rgba(124,58,237,.15);
+}
+
+.links{
+  display:flex;
+  gap: 8px;
+  align-items:center;
+}
+
+.link{
+  text-decoration:none;
+  padding: 10px 12px;
+  border-radius: 999px;
+  color: rgba(255,255,255,.78);
+  border: 1px solid transparent;
+  transition: background .12s ease, border-color .12s ease, color .12s ease;
+}
+.link:hover{
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.10);
+  color: rgba(255,255,255,.92);
+}
+.link.active{
+  background: rgba(124,58,237,.18);
+  border-color: rgba(124,58,237,.35);
+  color: rgba(255,255,255,.95);
+}
+
+.main{
+  padding-bottom: 28px;
+}
