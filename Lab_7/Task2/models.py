@@ -10,10 +10,6 @@ class Animal:
     def describe(self) -> str:
         return f"{self.name} is {self.age} years old and weighs {self.weight} kg"
 
-    def __str__(self) -> str:
-        return f"{self.__class__.__name__}(name={self.name}, age={self.age}, weight={self.weight})"
-
-
 class Dog(Animal):
     def __init__(self, name: str, age: int, weight: float, breed: str):
         super().__init__(name, age, weight)
