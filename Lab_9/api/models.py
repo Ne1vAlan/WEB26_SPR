@@ -10,13 +10,13 @@ class Category(models.Model):
     def to_dict(self):
         return {
             "id": self.id,
-            "name": self.name            
+            "name": self.name
         }
-    
+
 
 class Product(models.Model):
     name = models.CharField(max_length=255)
-    price = models.FloatField() 
+    price = models.FloatField()
     description = models.TextField()
     count = models.IntegerField()
     is_active = models.BooleanField(default=True)
